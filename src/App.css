@@ -1,0 +1,164 @@
+:root{
+  --cr-body:  hsl(236, 100%, 87%);
+  --cr-principal:hsl(246, 80%, 60%);
+  --cr-work: hsl(15, 100%, 70%);
+  --cr-play: hsl(195, 74%, 62%);
+  --cr-study: hsl(348, 100%, 68%);
+  --cr-exercise: hsl(145, 58%, 55%);
+  --cr-social: hsl(264, 64%, 52%);
+  --cr-care: hsl(43, 84%, 65%);
+  --cr-escuro: hsl(226, 43%, 10%);
+  --cr-azul-escuro: hsl(235, 46%, 20%);
+  --cr-azul: hsl(235, 45%, 61%);
+  --cr-roxo: hsl(236, 100%, 87%);
+  --largura: 375px;
+  --largura-pequena: 250px;
+  --borda: 1em;
+  --padding: 1.5em;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  font-family: 'Rubik',sans-serif;
+  font-size: 18px;
+  color: white;
+  background: var(--cr-escuro);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* MENU ------------------------------------------------------- */
+.menu{
+  width:var(--largura);
+  position: relative;
+}
+/* Usuário */
+.usuario{
+  background: var(--cr-principal);
+  border-radius: var(--borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding);
+  position: relative;
+  z-index: 10;
+}
+.avatar{
+  width: 90px;
+  height: 90px;
+  border:solid 3px white;
+  border-radius: 50%;
+}
+.avatar > img{
+  width: 90px;
+}
+.info-usu{
+  margin-left: var(--padding);
+}
+.info-usu h3{
+  font-weight: 300;
+  font-size: 1em;
+  color:var(--cr-roxo)
+}
+.info-usu h2{
+  font-weight: 300;
+  font-size: 1.3em;
+  color:white;
+}
+/* Botões */
+.periodos{
+  background: var(--cr-azul-escuro);
+  border-radius: var(--borda);
+  padding: 1.5em 3em;
+  padding-top:calc(var(--padding) + 2em);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -2em;
+}
+.bt-periodo{
+  font-family: 'Rubik';
+  font-weight: 300;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--cr-azul);
+  font-size: 1.1em;
+}
+.bt-periodo:hover{
+  color: white;
+}
+.bt-ativo{
+  color:white;
+}
+/* CARDS ------------------------------------------------------- */
+.cards{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 1440px){
+  body{
+    place-items: center;
+    height: 100vh;
+  }
+  .container{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    place-items: center;
+    /* gap: -6em; */
+    width: 1150px;
+    height: calc(446px + 2em);
+  }
+  .menu{
+    width: var(--largura-pequena);
+    height: calc(446px + 2em);
+  }
+  .usuario{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+  }
+  .info-usu{
+    margin-left:0;
+    margin-bottom: 2.6em;
+  }
+  .info-usu h2{
+    font-size: 2em;
+    font-weight: 300;
+  }
+  .avatar{
+    margin-bottom: 2.4em;
+  }
+
+  .periodos{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:2em 2em;
+    padding-top: 3.2em;
+    padding-bottom: 1em;
+  }  
+  .bt-periodo{
+    padding: .3em 0;
+    font-size: 1em;
+  }
+  
+  .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 2em;
+    /* margin: 0; */
+  }
+}

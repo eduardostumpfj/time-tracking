@@ -1,0 +1,114 @@
+.card{
+    width: var(--largura);
+    margin: -10px 0px;
+}
+
+.topo-card{
+    border-radius: var(--borda);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    max-height: 80px;
+    overflow: hidden;
+}
+.topo-card img{
+    position: relative;
+    margin-right:var(--borda);
+    height: 90px;
+    top:-20px;
+}
+
+.corpo-card{
+    cursor: pointer;
+    position: relative;
+    background-color: var(--cr-azul-escuro);
+    border-radius: var(--borda);
+    z-index: 2;
+    top: -2.5em;
+    padding: var(--padding);
+    transition: background-color .3s;
+}
+.corpo-card:hover{
+    background-color: rgb(52, 57, 123);
+}
+/* NOME DO CARD--------------------------------------------------- */
+.nome-card{
+    display: flex;
+    justify-content: space-between;
+}
+.nome-atividade{
+    font-weight: 300;
+}
+.tres-pontos{
+    font-weight: 300;
+    color: var(--cr-roxo);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.tres-pontos:hover{
+    color: white;
+}
+
+
+/* HORAS ------------------------------------------------------------- */
+.bloco-horas{
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+.horas{
+    font-weight: 300;
+    font-size:1.7em;
+}
+.marcador-anterior{
+    font-weight: 300;
+    color: var(--cr-roxo);
+    font-size:.8em;
+}
+
+
+
+
+/* CORES ------------------------------------------------------------- */
+#work{
+    background: var(--cr-work);
+}
+#play{
+    background: var(--cr-play);
+}
+#study{
+    background: var(--cr-study);
+}
+#exercise{
+    background: var(--cr-exercise);
+}
+#social{
+    background: var(--cr-social);
+}
+#self-care{
+    background: var(--cr-care);
+}
+
+@media (min-width: 1440px){
+    .card{
+        width: var(--largura-pequena);
+        height: 223px;
+        margin: 0;;
+    }
+    .bloco-horas{
+        flex-direction: column;
+        align-items:flex-start;
+        margin-top:1em;
+    }
+    .horas{
+        font-size:2.5em;
+        margin-bottom: .3em;
+    }
+    .nome-atividade{
+        font-weight: 400;
+    }
+    .tres-pontos{
+        position: relative;
+        top:-10px;
+    }
+}
