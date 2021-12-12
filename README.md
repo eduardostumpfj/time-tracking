@@ -27,7 +27,6 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/eduardostumpfj/time-tracking)
-- Live Site URL: (https://eduardostumpfj.github.io/time-tracking/)
 
 ## My process
 
